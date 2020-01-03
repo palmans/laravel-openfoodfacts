@@ -1,0 +1,54 @@
+{
+    "name": "palmans/laravel-openfoodfacts",
+    "description": "Open Food Facts API wrapper for Laravel",
+    "keywords": [
+        "palmans",
+        "laravel-openfoodfacts",
+        "openfoodfacts"
+    ],
+    "homepage": "https://github.com/palmans/laravel-openfoodfacts",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Eddie Palmans",
+            "email": "eddie@palmans.nl"
+        }
+    ],
+    "require": {
+        "php": ">=7",
+        "illuminate/support": "5.7.x|5.8.x|6.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*|4.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Palmans\\LaravelOpenFoodFacts\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Palmans\\LaravelOpenFoodFacts\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Palmans\\LaravelOpenFoodFacts\\LaravelOpenFoodFactsServiceProvider"
+            ],
+            "aliases": {
+                "OpenFoodFacts": "Palmans\\LaravelOpenFoodFacts\\OpenFoodFactsFacade"
+            }
+        }
+    }
+}
