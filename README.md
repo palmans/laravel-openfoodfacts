@@ -1,11 +1,11 @@
-# Very short description of the package
+# Laravel Open Food Facts API
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/palmans/laravel-openfoodfacts.svg?style=flat-square)](https://packagist.org/packages/palmans/laravel-openfoodfacts)
 [![Build Status](https://img.shields.io/travis/palmans/laravel-openfoodfacts/master.svg?style=flat-square)](https://travis-ci.org/palmans/laravel-openfoodfacts)
 [![Quality Score](https://img.shields.io/scrutinizer/g/palmans/laravel-openfoodfacts.svg?style=flat-square)](https://scrutinizer-ci.com/g/palmans/laravel-openfoodfacts)
 [![Total Downloads](https://img.shields.io/packagist/dt/palmans/laravel-openfoodfacts.svg?style=flat-square)](https://packagist.org/packages/palmans/laravel-openfoodfacts)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+This package provides a convenient wrapper to the [Open Food Facts API](https://en.wiki.openfoodfacts.org/API).
 
 ## Installation
 
@@ -47,7 +47,3 @@ If you discover any security related issues, please email eddie@palmans.nl inste
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
