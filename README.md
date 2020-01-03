@@ -5,7 +5,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/palmans/laravel-openfoodfacts.svg?style=flat-square)](https://scrutinizer-ci.com/g/palmans/laravel-openfoodfacts)
 [![Total Downloads](https://img.shields.io/packagist/dt/palmans/laravel-openfoodfacts.svg?style=flat-square)](https://packagist.org/packages/palmans/laravel-openfoodfacts)
 
-This package provides a convenient wrapper to the [Open Food Facts API](https://en.wiki.openfoodfacts.org/API).
+This package provides a convenient wrapper to the [Open Food Facts API](https://en.wiki.openfoodfacts.org/API) for Laravel applications (5.7+).
 
 ## Installation
 
@@ -20,10 +20,17 @@ Find product details by barcode
 ``` php
 OpenFoodFacts::barcode('20203467');
 ```
-... or just retrieve specific details, e.g.
+... or directly retrieve a specific attribute:
 ``` php
 OpenFoodFacts::barcode('20203467')->product_name; // 'Cantuccini with hazelnuts'
 OpenFoodFacts::barcode('20203467')->image_url; // 'https://static.openfoodfacts.org/images/products/20203467/front_fr.4.400.jpg'
+```
+
+Find products that match a search term:
+``` php
+$collection = OpenFoodFacts::find('Coca Cola Zero');
+
+//returns a Illuminate\Support\Collection with details of each product found
 ```
 
 ### Testing
