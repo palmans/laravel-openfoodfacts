@@ -16,9 +16,14 @@ composer require palmans/laravel-openfoodfacts
 ```
 
 ## Usage
-
+Find product details by barcode
 ``` php
-// Usage description here
+OpenFoodFacts::barcode('20203467');
+```
+... or just retrieve specific details, e.g.
+``` php
+OpenFoodFacts::barcode('20203467')->product_name; // 'Cantuccini with hazelnuts'
+OpenFoodFacts::barcode('20203467')->image_url; // 'https://static.openfoodfacts.org/images/products/20203467/front_fr.4.400.jpg'
 ```
 
 ### Testing

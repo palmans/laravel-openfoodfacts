@@ -16,8 +16,10 @@
         }
     ],
     "require": {
-        "php": ">=7",
-        "illuminate/support": "5.7.x|5.8.x|6.*"
+        "php": ">=7.1",
+        "guzzlehttp/guzzle": "^6.3",
+        "illuminate/support": "5.7.x|5.8.x|6.*",
+        "openfoodfacts/openfoodfacts-php": "^0.2.0"
     },
     "require-dev": {
         "orchestra/testbench": "3.8.*|4.*",
@@ -44,10 +46,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Palmans\\LaravelOpenFoodFacts\\LaravelOpenFoodFactsServiceProvider"
+                "Palmans\\LaravelOpenFoodFacts\\OpenFoodFactsServiceProvider"
             ],
             "aliases": {
-                "OpenFoodFacts": "Palmans\\LaravelOpenFoodFacts\\OpenFoodFactsFacade"
+                "OpenFoodFacts": "Palmans\\LaravelOpenFoodFacts\\Facades\\OpenFoodFacts"
             }
         }
     }
