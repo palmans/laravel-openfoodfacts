@@ -27,7 +27,9 @@ class OpenFoodFacts extends OpenFoodFactsApiWrapper
             throw new InvalidArgumentException("Argument must represent a barcode");
         }
 
-        return $this->api->getProduct($value);
+        $doc = $this->api->getProduct($value);
+
+        return empty($doc->code) ? null : $doc;
     }
 
     public function find($searchterm)
