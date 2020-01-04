@@ -3,16 +3,10 @@
 namespace Palmans\LaravelOpenFoodFacts\Tests;
 
 use OpenFoodFacts\Document;
-use Orchestra\Testbench\TestCase;
 use Palmans\LaravelOpenFoodFacts\Facades\OpenFoodFacts;
 
-class ProductSearchTest extends TestCase
+class ProductSearchTest extends Base\FacadeTestCase
 {
-    protected function getPackageProviders($app)
-    {
-        return [\Palmans\LaravelOpenFoodFacts\OpenFoodFactsServiceProvider::class];
-    }
-
     /** @test */
     public function it_returns_a_laravelcollection_with_documents()
     {
@@ -41,5 +35,14 @@ class ProductSearchTest extends TestCase
         $this->expectException("Exception");
 
         OpenFoodFacts::find('cola');
+    }
+
+    /** @test */
+    public function it_throws_an_exception_when_argument_empty()
+    {
+        $this->expectException("InvalidArgumentException");
+        $this->expectExceptionMessage("Specify a search term to find data for matching products");
+
+        OpenFoodFacts::find('');
     }
 }

@@ -2,16 +2,10 @@
 
 namespace Palmans\LaravelOpenFoodFacts\Tests;
 
-use Orchestra\Testbench\TestCase;
 use Palmans\LaravelOpenFoodFacts\Facades\OpenFoodFacts;
 
-class BarcodeFindTest extends TestCase
+class BarcodeFindTest extends Base\FacadeTestCase
 {
-    protected function getPackageProviders($app)
-    {
-        return [\Palmans\LaravelOpenFoodFacts\OpenFoodFactsServiceProvider::class];
-    }
-
     /** @test */
     public function it_returns_a_document_when_product_found()
     {
