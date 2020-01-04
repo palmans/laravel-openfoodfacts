@@ -3,7 +3,6 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/palmans/laravel-openfoodfacts.svg?style=flat-square)](https://packagist.org/packages/palmans/laravel-openfoodfacts)
 [![Build Status](https://img.shields.io/travis/palmans/laravel-openfoodfacts/master.svg?style=flat-square)](https://travis-ci.org/palmans/laravel-openfoodfacts)
 [![Quality Score](https://img.shields.io/scrutinizer/g/palmans/laravel-openfoodfacts.svg?style=flat-square)](https://scrutinizer-ci.com/g/palmans/laravel-openfoodfacts)
-[![Total Downloads](https://img.shields.io/packagist/dt/palmans/laravel-openfoodfacts.svg?style=flat-square)](https://packagist.org/packages/palmans/laravel-openfoodfacts)
 
 This package provides a convenient wrapper to the [Open Food Facts API](https://en.wiki.openfoodfacts.org/API) for Laravel applications (5.7+).
 
