@@ -17,3 +17,14 @@ checks:
         fix_identation_4spaces: true
         fix_doc_comments: true
 
+build:
+    environment:
+            php:
+                version: 7.2
+    tests:
+        override:
+            -
+                command: vendor/bin/phpunit
+                coverage:
+                    file: build/logs/clover.xml
+                    format: php-clover
