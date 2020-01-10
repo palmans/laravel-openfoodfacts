@@ -2,13 +2,12 @@
 
 namespace Palmans\LaravelOpenFoodFacts\Tests;
 
-use OpenFoodFacts\Document;
 use Palmans\LaravelOpenFoodFacts\Facades\OpenFoodFacts;
 
 class ProductSearchTest extends Base\FacadeTestCase
 {
     /** @test */
-    public function it_returns_a_laravelcollection_with_documents()
+    public function it_returns_a_laravelcollection_with_arrays()
     {
         $results = OpenFoodFacts::find('Stir-Fry Rice Noodles');
 
@@ -16,8 +15,8 @@ class ProductSearchTest extends Base\FacadeTestCase
 
         $this->assertTrue($results->isNotEmpty());
 
-        $results->each(function($doc) {
-            $this->assertInstanceOf(\OpenFoodFacts\Document::class, $doc);
+        $results->each(function($arr) {
+            $this->assertIsArray($arr);
         });
     }
 

@@ -55,7 +55,9 @@ class OpenFoodFacts extends OpenFoodFactsApiWrapper
 
         } while ($page < $pages);
 
-        return $products;
+        return $products->map(function ($product) {
+            return reset($product);
+        });
     }
 
     public function __call($method, $parameters)
