@@ -16,41 +16,32 @@ composer require palmans/laravel-openfoodfacts
 ```
 
 ## Usage
-Find product details by barcode
+
+#### Find product details by barcode
 ``` php
 OpenFoodFacts::barcode('20203467');
 ```
-... or directly retrieve a specific attribute:
-``` php
-OpenFoodFacts::barcode('20203467')->product_name; // 'Cantuccini with hazelnuts'
-OpenFoodFacts::barcode('20203467')->image_url; // 'https://static.openfoodfacts.org/images/products/20203467/front_fr.4.400.jpg'
+it returns an array with product details:
+```
+Array
+(
+    [product_name] => Cantuccini with hazelnuts
+    [image_url] => https://static.openfoodfacts.org/images/products/20203467/front_fr.4.400.jpg
+    ...    
+)    
 ```
 
-Find products that match a search term:
+#### Find products that match a search term:
 ``` php
 $collection = OpenFoodFacts::find('Coca Cola Zero');
 
-//returns a Illuminate\Support\Collection with details of each product found
+//returns a Illuminate\Support\Collection of arrays with details of each product found
 ```
 
-### Testing
-
-``` bash
-composer test
-```
 
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-### Security
-
-If you discover any security related issues, please email eddie@palmans.nl instead of using the issue tracker.
-
-## Credits
-
-- [Eddie Palmans](https://github.com/palmans)
-- [All Contributors](../../contributors)
 
 ## License
 
