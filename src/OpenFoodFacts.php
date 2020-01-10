@@ -29,7 +29,7 @@ class OpenFoodFacts extends OpenFoodFactsApiWrapper
 
         $doc = $this->api->getProduct($value);
 
-        return empty($doc->code) ? null : $doc;
+        return empty($doc->code) ? [] : reset($doc);
     }
 
     public function find($searchterm)

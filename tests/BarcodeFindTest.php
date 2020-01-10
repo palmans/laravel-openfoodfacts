@@ -7,19 +7,19 @@ use Palmans\LaravelOpenFoodFacts\Facades\OpenFoodFacts;
 class BarcodeFindTest extends Base\FacadeTestCase
 {
     /** @test */
-    public function it_returns_a_document_when_product_found()
+    public function it_returns_an_array_with_data_when_product_found()
     {
-        $doc = OpenFoodFacts::barcode('0737628064502');
+        $arr = OpenFoodFacts::barcode('0737628064502');
 
-        $this->assertInstanceOf(\OpenFoodFacts\Document::class, $doc);
+        $this->assertArrayHasKey('code', $arr);
     }
 
     /** @test */
-    public function it_returns_null_when_product_not_found()
+    public function it_returns_an_empty_array_when_product_not_found()
     {
-        $doc = OpenFoodFacts::barcode('this-barcode-does-not-exist');
+        $arr = OpenFoodFacts::barcode('this-barcode-does-not-exist');
 
-        $this->assertNull($doc);
+        $this->assertEquals([], $arr);
     }
 
     /** @test */
