@@ -7,6 +7,15 @@
 
 This package provides a convenient wrapper to the [Open Food Facts API](https://en.wiki.openfoodfacts.org/API) for Laravel applications (5.7+).
 
+
+**Abandoned. Do not use this repo anymore**
+## ** **MOVED TO OFFICIAL REPO** **
+### >>> NEW LOCATION: [openfoodfacts/openfoodfacts-laravel](https://github.com/openfoodfacts/openfoodfacts-laravel) <<<
+
+<br/><br/>
+
+<br/><br/>
+### Archive:
 ## Installation
 
 You can install the package via composer:
